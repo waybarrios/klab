@@ -1,0 +1,196 @@
+{
+ "models": [
+  {
+   "model": "minilm-l6-like (seq 32)",
+   "weight_bytes": 21293568,
+   "plain_us": 295.9359884262085,
+   "prefetch_us": 295.83999514579773,
+   "saved_pct": 0.021633836044732124,
+   "ci95": [
+    -0.34602340955112165,
+    0.32446206452032555
+   ],
+   "aa_pct": 0.021706606114535454,
+   "bit_identical": true,
+   "tune_seconds": 0.38892396699884557,
+   "temp_start": 60,
+   "plans": [
+    {
+     "signature": "('TransformerEncoderLayer', (((1152, 384), torch.bfloat16), ((384, 384), torch.bfloat16), ((1536, 384), torch.bfloat16), ((384, 1536), torch.bfloat16)))",
+     "layers": 6,
+     "bytes": 3538944,
+     "plan": null,
+     "saved_pct": null
+    }
+   ]
+  },
+  {
+   "model": "bert-small-like (seq 16)",
+   "weight_bytes": 25219072,
+   "plain_us": 239.55200612545013,
+   "prefetch_us": 238.5919988155365,
+   "saved_pct": 0.0,
+   "ci95": [
+    -0.026745322199550614,
+    0.4007511042971146
+   ],
+   "aa_pct": -0.13372661099779748,
+   "bit_identical": true,
+   "tune_seconds": 0.14482804299950658,
+   "temp_start": 60,
+   "plans": [
+    {
+     "signature": "('TransformerEncoderLayer', (((1536, 512), torch.bfloat16), ((512, 512), torch.bfloat16), ((2048, 512), torch.bfloat16), ((512, 2048), torch.bfloat16)))",
+     "layers": 4,
+     "bytes": 6291456,
+     "plan": null,
+     "saved_pct": null
+    }
+   ]
+  },
+  {
+   "model": "vit-tiny-like (224px)",
+   "weight_bytes": 11434832,
+   "plain_us": 764.9279832839966,
+   "prefetch_us": 765.9199833869934,
+   "saved_pct": -0.13386983083623072,
+   "ci95": [
+    -0.1673995170250242,
+    -0.0209186139656925
+   ],
+   "aa_pct": -0.0209186139656925,
+   "bit_identical": true,
+   "tune_seconds": 0.5706393190012022,
+   "temp_start": 60,
+   "plans": [
+    {
+     "signature": "('PatchEmbed', (((1, 197, 192), torch.bfloat16), ((192, 3, 16, 16), torch.bfloat16)))",
+     "layers": 1,
+     "bytes": 370560,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('TransformerEncoderLayer', (((576, 192), torch.bfloat16), ((192, 192), torch.bfloat16), ((768, 192), torch.bfloat16), ((192, 768), torch.bfloat16)))",
+     "layers": 12,
+     "bytes": 884736,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Head', (((1000, 192), torch.bfloat16),))",
+     "layers": 1,
+     "bytes": 384000,
+     "plan": null,
+     "saved_pct": null
+    }
+   ]
+  },
+  {
+   "model": "dlrm-like mlp (batch 8)",
+   "weight_bytes": 7709956,
+   "plain_us": 80.83199709653854,
+   "prefetch_us": 80.79999685287476,
+   "saved_pct": 0.0,
+   "ci95": [
+    -1.1217941243468754,
+    0.03955726441300378
+   ],
+   "aa_pct": 0.0,
+   "bit_identical": true,
+   "tune_seconds": 0.27780642400102806,
+   "temp_start": 60,
+   "plans": [
+    {
+     "signature": "('Sequential', (((256, 512), torch.float32),))",
+     "layers": 2,
+     "bytes": 524288,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Sequential', (((64, 256), torch.float32),))",
+     "layers": 1,
+     "bytes": 65536,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Sequential', (((1024, 64), torch.float32),))",
+     "layers": 1,
+     "bytes": 262144,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Sequential', (((1024, 1024), torch.float32),))",
+     "layers": 1,
+     "bytes": 4194304,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Sequential', (((512, 1024), torch.float32),))",
+     "layers": 1,
+     "bytes": 2097152,
+     "plan": null,
+     "saved_pct": null
+    }
+   ]
+  },
+  {
+   "model": "rl actor-critic mlp (batch 1)",
+   "weight_bytes": 9711872,
+   "plain_us": 74.75200295448303,
+   "prefetch_us": 74.75200295448303,
+   "saved_pct": 0.0,
+   "ci95": [
+    0.0,
+    1.0860469675997741
+   ],
+   "aa_pct": 0.0,
+   "bit_identical": true,
+   "tune_seconds": 0.1707546130000992,
+   "temp_start": 60,
+   "plans": [
+    {
+     "signature": "('Sequential', (((1024, 256), torch.float32),))",
+     "layers": 1,
+     "bytes": 1048576,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Sequential', (((1024, 1024), torch.float32),))",
+     "layers": 2,
+     "bytes": 4194304,
+     "plan": null,
+     "saved_pct": null
+    },
+    {
+     "signature": "('Sequential', (((64, 1024), torch.float32),))",
+     "layers": 1,
+     "bytes": 262144,
+     "plan": null,
+     "saved_pct": null
+    }
+   ]
+  }
+ ],
+ "regime_before": {
+  "nvidia_powerd": "inactive",
+  "smi": "P0, 6001 MHz, 1635 MHz, 63, 51.89 W, 0x0000000000000000",
+  "ac_online": "1"
+ },
+ "regime_after": {
+  "nvidia_powerd": "inactive",
+  "smi": "P0, 6001 MHz, 1635 MHz, 64, 70.75 W, 0x0000000000000000",
+  "ac_online": "1"
+ },
+ "geomean": 0.06877508304672375,
+ "criteria": {
+  "a": false,
+  "b": true,
+  "c": true
+ }
+}

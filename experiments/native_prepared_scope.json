@@ -1,0 +1,41 @@
+{
+  "name": "Frozen CUDA native host binding scoped API validation",
+  "schema_version": 1,
+  "registration": "Before the first native binding timing, following the completed Python API and component studies",
+  "search_allowed": false,
+  "device_implementation": "Identical cached R1 PTX for M1, R2 PTX otherwise; original per-shape frozen T/V choices, deterministic tile and exact BF16 checkpoint bits",
+  "production_promotion_allowed": false,
+  "weights_layer": 8,
+  "cases": [
+    {"projection": "self_attn.q_proj.weight", "m": 2},
+    {"projection": "mlp.gate_proj.weight", "m": 1},
+    {"projection": "mlp.down_proj.weight", "m": 1},
+    {"projection": "self_attn.k_proj.weight", "m": 1},
+    {"projection": "self_attn.v_proj.weight", "m": 1},
+    {"synthetic_shape_mnk": [1, 64, 64]}
+  ],
+  "output_contracts": ["bf16", "fp32"],
+  "seeds": [947, 953, 967],
+  "maximum_measured_processes_per_seed": 1,
+  "preflight_policy": "A launch that fails before the report or any timed case exists is not a measured process; preserve its error log and correct the unmet environmental precondition before retrying",
+  "rounds": 31,
+  "eager_calls_per_round_min": 32,
+  "eager_calls_per_round": "max(32, number of physical weight copies), visiting every ring entry in each round",
+  "physical_original_weight_ring_bytes_min": 83886080,
+  "contexts": "Stock RTX3070TiLaptop, Performance on AC, observed clocks/context source-bound, no custom clock or driver changes",
+  "precision": "BF16 input/weights, FP32 accumulation, requested BF16 or FP32 output, TF32/reduced BF16 reduction disabled",
+  "arms": {
+    "vendor": "Allocation-including direct native torch.mm with prebound weight.T",
+    "vendor_aa": "Independently timed identical native Torch route",
+    "native": "Fixed allocating C++Torch op over exact original cached PTX; diagnostic even on failed kernel shapes. One metadata plan serves explicit physical tensor arguments; no per-copy plan preparation inside calls.",
+    "python_registered": "Original allocating Python registered custom op called with explicit ring tensor arguments, same packed buffers/configuration",
+    "selected": "Native op only if this shape passed every original kernel gate; otherwise prebound native Torch without packing in the selected call"
+  },
+  "configuration_for_controls": "Fixed coded_t64_v8, never selected as a custom winner",
+  "configuration_for_real_cases": "Frozen original profile choice for each shape, no search or latency-driven changes",
+  "scopes": "Report synchronized allocation-including eager and captured allocation-including graph separately. No reuse-output baseline against allocating native op.",
+  "numerics": "Exact original weight-bit preservation, native-versus-old-wrapper output bit parity, unchanged FP64 oracle on every arm and physical ring output, before/after timing checks",
+  "gates": "Each case requires stable observed context, numeric checks, abs(vendor A/A)<=1%; custom gain requires paired95% lower saved-latency bound>10%; fallback overhead requires paired95% lower bound>=-1%. Every registered synthetic fallback control must pass for its scope. Preserve all failures; no rerun until pass.",
+  "claims": "Scoped API comparison to direct Torch only, not best-of-all-vendors or full-model throughput. Original kernel-only full-vendor evidence remains separate. Three fresh processes required for an accepted scoped result.",
+  "reporting": "All 12 cases per process, raw paired rounds, exact source/PTX/native binary/input/profile/evidence hashes, runtime/device/unlock inventory, context snapshots and plan metadata; no absent unlocked or energy cells fabricated"
+}

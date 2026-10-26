@@ -1,0 +1,12 @@
+h=9 kvh=3 L=192: sdpa 19.36 flashinfer 9.47 v4 6.36 us | fi err 8.4e-04 sdpa err 1.2e-03
+h=9 kvh=3 L=640: sdpa 16.38 flashinfer 13.43 v4 8.23 us | fi err 7.9e-04 sdpa err 4.9e-04
+h=9 kvh=3 L=1280: sdpa 17.66 flashinfer 13.57 v4 11.09 us | fi err 4.1e-04 sdpa err 5.7e-04
+h=15 kvh=5 L=192: sdpa 19.71 flashinfer 10.28 v4 6.48 us | fi err 9.5e-04 sdpa err 1.2e-03
+h=15 kvh=5 L=640: sdpa 17.32 flashinfer 14.17 v4 8.79 us | fi err 7.9e-04 sdpa err 4.9e-04
+h=15 kvh=5 L=1280: sdpa 19.06 flashinfer 14.46 v4 13.74 us | fi err 6.9e-04 sdpa err 4.7e-04
+h=14 kvh=2 L=192: flashinfer unsupported (ecode.cuh:684: Unsupported group_size: 7)
+h=14 kvh=2 L=640: flashinfer unsupported (ecode.cuh:684: Unsupported group_size: 7)
+h=14 kvh=2 L=1280: flashinfer unsupported (ecode.cuh:684: Unsupported group_size: 7)
+h=32 kvh=4 L=192: sdpa 19.16 flashinfer 13.65 v4 7.17 us | fi err 9.7e-04 sdpa err 1.2e-03
+h=32 kvh=4 L=640: sdpa 16.60 flashinfer 15.90 v4 14.67 us | fi err 8.7e-04 sdpa err 8.7e-04
+h=32 kvh=4 L=1280: sdpa 18.16 flashinfer 16.30 v4 20.14 us | fi err 5.8e-04 sdpa err 4.4e-04

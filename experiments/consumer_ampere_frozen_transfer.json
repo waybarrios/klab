@@ -1,0 +1,84 @@
+{
+  "name": "R2 frozen-choice transfer to Battery power profile",
+  "schema_version": 1,
+  "registered_utc": "2026-10-24T22:52:08.848634+00:00",
+  "registration_scope": "Before R2 Battery fixed-choice calibration/held-out data; earlier R1 training prototypes already exist",
+  "base_spec": {
+    "path": "experiments/consumer_ampere_bf16.json",
+    "sha256": "438db12b06d038e371d73c7c660214b944e499bf928014810f2314e33e4d1085"
+  },
+  "source_profiles": [
+    {
+      "path": "results/compressed-performance-bf16-search-r2.json",
+      "sha256": "b11b582eefc5ee2f49b65c33b6e20eeb70f26648ca29c01eeaa525a0e79d8121",
+      "output_dtype": "bf16",
+      "choices": {
+        "896,896": "coded_t64_v8",
+        "128,896": "coded_t64_v8",
+        "4864,896": "coded_t128_v8",
+        "896,4864": "coded_t256_v8"
+      }
+    },
+    {
+      "path": "results/compressed-performance-fp32-search-r2.json",
+      "sha256": "184cea81f732ad7d55b410511bfa8d66933956d94ee50cc89787ea289e43b9fb",
+      "output_dtype": "fp32",
+      "choices": {
+        "896,896": "coded_t256_v8",
+        "128,896": "coded_t64_v8",
+        "4864,896": "coded_t128_v8",
+        "896,4864": "coded_t128_v8"
+      }
+    }
+  ],
+  "destination_profile": "Power Profile: Battery",
+  "kernel_revision": 2,
+  "custom_configuration_search_allowed": false,
+  "code_or_codec_revision_allowed": false,
+  "calibration": {
+    "seed": 901,
+    "layers": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "m": 1,
+    "all_seven_projections": true,
+    "rounds": 31,
+    "custom_configurations_per_shape": 1,
+    "selection": "Exact source-profile choices for the matching output dtype; no reselection",
+    "minimum_primary_point_gain_pct": 12,
+    "maximum_absolute_aa_pct": 1,
+    "numerical_and_storage_gates": "Unchanged base spec"
+  },
+  "validation": {
+    "seeds": [
+      919,
+      929,
+      937
+    ],
+    "layers": [
+      8,
+      16,
+      23
+    ],
+    "m_values": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      64
+    ],
+    "include_tied_head": true,
+    "fresh_process_per_seed": true,
+    "rounds": 31,
+    "minimum_ci95_lower_strictly_above_pct": 10
+  },
+  "vendor_pool": "Same frozen eligible candidate pool; retime all routes and their own twins",
+  "provenance": "New training/calibration report and profile retain source profile SHA/choices, this protocol SHA and runner source SHA",
+  "power_changes": "Normal system76-power profile selection only; no clocks, voltage, limits, drivers or firmware",
+  "restoration": "Capture initial profile/brightness, then restore them in finally; current user preference Performance/255",
+  "physical_power": "Record AC observation; Battery profile does not imply unplugged operation"
+}

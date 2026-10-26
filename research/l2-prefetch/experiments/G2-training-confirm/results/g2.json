@@ -1,0 +1,212 @@
+{
+ "shapes": [
+  {
+   "dtype": "bf16",
+   "d": 320,
+   "m": 4,
+   "layers": 410,
+   "plan": {
+    "blocks": 8,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b8",
+   "calib_lower_ci": 5.936506466039737,
+   "plain_us_per_layer": 16.55843897563655,
+   "tuned_us_per_layer": 14.795551067445336,
+   "saved_pct": 10.557317307064062,
+   "ci95": [
+    7.582194893283745,
+    10.660708991601453
+   ],
+   "aa_pct": 0.06135673066245406,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "bf16",
+   "d": 320,
+   "m": 8,
+   "layers": 410,
+   "plan": {
+    "blocks": 8,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b8",
+   "calib_lower_ci": 9.960934127021638,
+   "plain_us_per_layer": 16.872975884414302,
+   "tuned_us_per_layer": 15.172526894546136,
+   "saved_pct": 10.064628022122491,
+   "ci95": [
+    10.041210749671325,
+    10.105042824441357
+   ],
+   "aa_pct": -0.047642909774170406,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "bf16",
+   "d": 640,
+   "m": 4,
+   "layers": 103,
+   "plan": {
+    "blocks": 1,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b1",
+   "calib_lower_ci": 3.66910668696121,
+   "plain_us_per_layer": 31.72163130010216,
+   "tuned_us_per_layer": 30.292504042097665,
+   "saved_pct": 4.451869365902983,
+   "ci95": [
+    4.414002044573451,
+    4.545990836644176
+   ],
+   "aa_pct": 0.06957905257277686,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "bf16",
+   "d": 640,
+   "m": 8,
+   "layers": 103,
+   "plan": {
+    "blocks": 1,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b1",
+   "calib_lower_ci": 4.31952521283856,
+   "plain_us_per_layer": 30.620581895402335,
+   "tuned_us_per_layer": 28.930485827251545,
+   "saved_pct": 5.484819546014618,
+   "ci95": [
+    5.4545417435492904,
+    5.61505756078422
+   ],
+   "aa_pct": -0.0375668426543907,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "bf16",
+   "d": 896,
+   "m": 4,
+   "layers": 53,
+   "plan": {
+    "blocks": 2,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b2",
+   "calib_lower_ci": 3.593840015592875,
+   "plain_us_per_layer": 30.91139613457446,
+   "tuned_us_per_layer": 29.792603456749106,
+   "saved_pct": 3.685195802794916,
+   "ci95": [
+    3.4439616606524837,
+    3.749999545252636
+   ],
+   "aa_pct": -0.18957357013309473,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "bf16",
+   "d": 896,
+   "m": 8,
+   "layers": 53,
+   "plan": {
+    "blocks": 2,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b2",
+   "calib_lower_ci": 3.9392271411607505,
+   "plain_us_per_layer": 30.546114129840202,
+   "tuned_us_per_layer": 29.502792178459888,
+   "saved_pct": 3.4155635867316625,
+   "ci95": [
+    3.3089433416221503,
+    3.480788563936421
+   ],
+   "aa_pct": 0.019770722939127516,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "fp32",
+   "d": 448,
+   "m": 4,
+   "layers": 105,
+   "plan": {
+    "blocks": 1,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b1",
+   "calib_lower_ci": 10.998940571091998,
+   "plain_us_per_layer": 27.54925773257301,
+   "tuned_us_per_layer": 23.161904017130535,
+   "saved_pct": 15.910706892628445,
+   "ci95": [
+    15.869647173746992,
+    15.96367241213904
+   ],
+   "aa_pct": 0.02989107080142439,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  },
+  {
+   "dtype": "fp32",
+   "d": 448,
+   "m": 8,
+   "layers": 105,
+   "plan": {
+    "blocks": 1,
+    "kernel": "l2_hint",
+    "stride": 128
+   },
+   "calib_best": "b1",
+   "calib_lower_ci": 11.85204440048352,
+   "plain_us_per_layer": 29.296152932303293,
+   "tuned_us_per_layer": 24.62476094563802,
+   "saved_pct": 15.914793263502114,
+   "ci95": [
+    15.856100116244686,
+    16.00133594905052
+   ],
+   "aa_pct": -0.03326705224948601,
+   "bit_identical": true,
+   "temp_calib": 60,
+   "temp_eval": 60
+  }
+ ],
+ "regime_before": {
+  "nvidia_powerd": "inactive",
+  "smi": "P0, 6001 MHz, 1635 MHz, 63, 38.13 W, 0x0000000000000000",
+  "ac_online": "1"
+ },
+ "regime_after": {
+  "nvidia_powerd": "inactive",
+  "smi": "P0, 6001 MHz, 1635 MHz, 63, 51.89 W, 0x0000000000000000",
+  "ac_online": "1"
+ },
+ "geomean": 8.840310387007566,
+ "criteria": {
+  "a": true,
+  "b": true,
+  "c": true
+ }
+}

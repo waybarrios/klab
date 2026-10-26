@@ -1,0 +1,22 @@
+bf16 d=  320 M=  1 torch=2.760us pick=b1_200k kept=False eval +0.03% ci=-4.27..+0.18 aa=+0.00 bit=True calib=2.4s
+bf16 d=  320 M=  3 torch=4.703us pick=b8_200k kept=True eval +12.05% ci=+12.00..+12.10 aa=-0.04 bit=True calib=2.4s
+bf16 d=  320 M= 12 torch=4.765us pick=b8_200k kept=True eval +12.01% ci=+11.88..+12.20 aa=+0.00 bit=True calib=2.4s
+bf16 d=  576 M=  1 torch=6.394us pick=b4_648k kept=True eval +31.28% ci=+31.02..+31.44 aa=-0.00 bit=True calib=2.3s
+bf16 d=  576 M=  3 torch=7.055us pick=b8_648k kept=True eval +18.13% ci=+18.06..+18.18 aa=+0.11 bit=True calib=2.3s
+bf16 d=  576 M= 12 torch=7.773us pick=b1_648k kept=True eval +11.51% ci=+11.40..+11.61 aa=+0.01 bit=True calib=2.3s
+bf16 d=  832 M=  1 torch=6.110us pick=b4_1352k kept=True eval +13.46% ci=+13.19..+14.32 aa=+0.00 bit=True calib=2.3s
+bf16 d=  832 M=  3 torch=9.314us pick=b1_1352k kept=True eval +12.45% ci=+12.41..+12.45 aa=+0.00 bit=True calib=2.3s
+bf16 d=  832 M= 12 torch=8.257us pick=b2_1352k kept=True eval +21.98% ci=+21.79..+22.04 aa=-0.14 bit=True calib=2.3s
+bf16 d= 1152 M=  1 torch=12.000us pick=b2_2592k kept=True eval +15.48% ci=+15.20..+16.08 aa=+1.09 bit=True calib=2.2s
+bf16 d= 1152 M=  3 torch=12.800us pick=b1_512k kept=False eval +0.00% ci=-0.25..+0.25 aa=-0.24 bit=True calib=2.2s
+bf16 d= 1152 M= 12 torch=13.024us pick=b1_512k kept=False eval -0.02% ci=-0.43..+0.47 aa=+0.00 bit=True calib=2.2s
+fp32 d=  448 M=  2 torch=5.257us pick=b8_784k kept=True eval +23.93% ci=+23.79..+24.33 aa=+0.00 bit=True calib=2.4s
+fp32 d=  448 M= 24 torch=10.416us pick=b8_784k kept=True eval +15.54% ci=+15.46..+15.62 aa=+0.07 bit=True calib=2.3s
+fp32 d=  704 M=  2 torch=8.383us pick=b2_1936k kept=True eval +19.26% ci=+19.08..+19.32 aa=-0.01 bit=True calib=2.2s
+fp32 d=  704 M= 24 torch=15.336us pick=b1_1936k kept=True eval +8.21% ci=+7.90..+8.27 aa=+0.00 bit=True calib=2.3s
+fp16 d=  512 M=  1 torch=4.492us pick=b8_512k kept=True eval +4.13% ci=+3.71..+9.58 aa=+0.00 bit=True calib=2.2s
+fp16 d=  512 M=  8 torch=6.168us pick=b1_512k kept=True eval +18.19% ci=+18.17..+18.29 aa=+0.00 bit=True calib=2.2s
+fp16 d=  960 M=  1 torch=8.326us pick=b4_1800k kept=False eval +0.00% ci=+0.00..+0.27 aa=+0.24 bit=True calib=2.3s
+fp16 d=  960 M=  8 torch=9.617us pick=b2_1800k kept=True eval +10.33% ci=+10.19..+10.62 aa=+0.00 bit=True calib=2.2s
+
+H2b: n=20 geomean 12.81% a=True b=True c=True -> SUPPORTED

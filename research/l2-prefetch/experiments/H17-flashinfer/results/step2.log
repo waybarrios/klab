@@ -1,0 +1,13 @@
+smollm2-135m L=320: pick2 custom pick3 custom | 3-way vs base +20.46% (2-way +20.41%) 3-way vs 2-way +0.01% ci -0.06..+0.07 aa -0.00% fi-num True temp 60C
+smollm2-135m L=960: pick2 custom pick3 custom | 3-way vs base +18.54% (2-way +18.50%) 3-way vs 2-way -0.06% ci -0.19..+0.07 aa +0.00% fi-num True temp 60C
+smollm2-135m L=1792: pick2 custom pick3 custom | 3-way vs base +11.28% (2-way +11.29%) 3-way vs 2-way +0.11% ci +0.06..+0.18 aa -0.00% fi-num True temp 60C
+smollm2-360m L=320: pick2 custom pick3 custom | 3-way vs base +12.00% (2-way +11.98%) 3-way vs 2-way +0.04% ci -0.12..+0.08 aa -0.07% fi-num True temp 60C
+smollm2-360m L=960: pick2 custom pick3 custom | 3-way vs base +9.46% (2-way +9.50%) 3-way vs 2-way +0.04% ci -0.04..+0.12 aa +0.03% fi-num True temp 60C
+smollm2-360m L=1792: pick2 custom pick3 flashinfer | 3-way vs base +6.28% (2-way +1.63%) 3-way vs 2-way +4.64% ci +4.29..+4.91 aa +0.04% fi-num True temp 60C
+qwen2.5-0.5b L=320: pick2 custom pick3 custom | 3-way vs base +8.96% (2-way +8.92%) 3-way vs 2-way -0.04% ci -0.16..+0.15 aa +0.03% fi-num True temp 60C
+qwen2.5-0.5b L=960: pick2 custom pick3 custom | 3-way vs base +6.97% (2-way +6.90%) 3-way vs 2-way +0.04% ci -0.04..+0.11 aa +0.11% fi-num True temp 60C
+qwen2.5-0.5b L=1792: pick2 sdpa pick3 sdpa | 3-way vs base -0.04% (2-way -0.07%) 3-way vs 2-way +0.00% ci -0.08..+0.07 aa +0.00% fi-num True temp 60C
+tinyllama-1.1b L=320: pick2 custom pick3 custom | 3-way vs base +3.48% (2-way +3.51%) 3-way vs 2-way -0.07% ci -0.09..+0.13 aa -0.05% fi-num True temp 60C
+tinyllama-1.1b L=960: pick2 custom pick3 flashinfer | 3-way vs base +0.59% (2-way +0.08%) 3-way vs 2-way +0.50% ci +0.43..+0.59 aa +0.11% fi-num True temp 60C
+tinyllama-1.1b L=1792: pick2 sdpa pick3 flashinfer | 3-way vs base +0.91% (2-way -0.10%) 3-way vs 2-way +0.89% ci +0.81..+1.14 aa +0.03% fi-num True temp 60C
+H17 step2: 3-way vs base geomean 8.48% criteria {'a': True, 'b': False, 'c': True} -> NOT SUPPORTED

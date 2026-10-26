@@ -1,0 +1,6 @@
+minilm-l6-like (seq 32): weights 20.3 MiB | plain 295.9us prefetch 295.8us saved +0.02% ci -0.35..+0.32 aa +0.02% bits True groups kept 0/1 tune 0.4s temp 60C
+bert-small-like (seq 16): weights 24.1 MiB | plain 239.6us prefetch 238.6us saved +0.00% ci -0.03..+0.40 aa -0.13% bits True groups kept 0/1 tune 0.1s temp 60C
+vit-tiny-like (224px): weights 10.9 MiB | plain 764.9us prefetch 765.9us saved -0.13% ci -0.17..-0.02 aa -0.02% bits True groups kept 0/3 tune 0.6s temp 60C
+dlrm-like mlp (batch 8): weights 7.4 MiB | plain 80.8us prefetch 80.8us saved +0.00% ci -1.12..+0.04 aa +0.00% bits True groups kept 0/5 tune 0.3s temp 60C
+rl actor-critic mlp (batch 1): weights 9.3 MiB | plain 74.8us prefetch 74.8us saved +0.00% ci +0.00..+1.09 aa +0.00% bits True groups kept 0/3 tune 0.2s temp 60C
+G7 geomean 0.07% criteria {'a': False, 'b': True, 'c': True} -> NOT SUPPORTED

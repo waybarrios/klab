@@ -1,0 +1,27 @@
+minilm-l6-like (seq 32): units 25 groups kept 0/5 | plain 296.9us | nofast -4.83% hooks -4.50% (ci -4.82..-4.14) seq_relaxed +0.00% aa +0.00%
+bert-small-like (seq 16): units 17 groups kept 0/5 | plain 239.6us | nofast -3.75% hooks -3.51% (ci -3.85..-3.40) seq_relaxed -0.43% aa -0.11%
+Traceback (most recent call last):
+  File "/code/way/research/l2-prefetch/experiments/G7b-hooks/code/explore.py", line 43, in <module>
+    rows = harness2.run_variants(arms, x, 1, baseline="plain")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/way/research/l2-prefetch/src/harness2.py", line 23, in run_variants
+    return H.run_variants(variants, x0, calls, rounds=rounds, baseline=baseline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/way/research/l2-prefetch/src/harness.py", line 41, in run_variants
+    t = measure(fns, rounds=rounds, repeats=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/way/bench.py", line 68, in measure
+    with torch.cuda.graph(graph, stream=stream):
+  File "/code/way/.venv/lib/python3.12/site-packages/torch/cuda/graphs.py", line 265, in __exit__
+    self.cuda_graph.capture_end()
+  File "/code/way/.venv/lib/python3.12/site-packages/torch/cuda/graphs.py", line 126, in capture_end
+    super().capture_end()
+torch.AcceleratorError: CUDA error: capturing stream has unjoined work
+Search for `cudaErrorStreamCaptureUnjoined' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+vit-tiny-like (224px): units 52 groups kept 2/8 | plain 763.9us | nofast -0.10% hooks +0.94% (ci +0.80..+1.07) seq_relaxed -0.10% aa -0.01%
+dlrm-like mlp (batch 8): units 6 groups kept 1/5 | plain 79.9us | nofast +0.00% hooks +1.27% (ci +0.00..+1.28) seq_relaxed +0.00% aa -0.12%
+rl actor-critic mlp (batch 1): units 4 groups kept 0/3 | plain 75.6us | nofast +0.00% hooks +0.00% (ci -0.13..+0.21) seq_relaxed +0.00% aa +0.00%

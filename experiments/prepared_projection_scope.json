@@ -1,0 +1,35 @@
+{
+  "name": "Frozen R2 prepared-projection execution-scope validation",
+  "schema_version": 1,
+  "registration": "After kernel-only held-out results and before the first full-grid prepared-candidate timing",
+  "kernel_search_allowed": false,
+  "production_custom_promotion_allowed_by_this_runner": false,
+  "kernel_evidence": {
+    "bf16_output": "results/compressed-performance-bf16-evidence-r2.json",
+    "fp32_output": "results/compressed-performance-fp32-evidence-r2.json"
+  },
+  "weights": "All registered held-out layers/projections plus the retained tied head, unchanged native BF16 checkpoint bits",
+  "activations": "Controlled synthetic native BF16 data, seed919, same activation policy as the kernel-only study",
+  "tokens": [1, 2, 4, 8, 16, 64],
+  "synthetic_controls_mnk": [[1, 64, 64], [1, 128, 128], [1, 256, 256], [4, 256, 256]],
+  "output_contracts": ["bf16", "fp32"],
+  "accumulation": "FP32, no TF32 or reduced-precision BF16 reductions",
+  "primary_regime": "Performance power profile on AC, stock GPU, original kernel-evidence runtime/context/memory-clock bindings",
+  "physical_weight_ring": "At least max(80MiB,20*L2) distinct original weight bytes; independent packed copies when selected",
+  "rounds": 31,
+  "maximum_full_grid_runs_per_contract": 1,
+  "selection": "Only each shape's complete three-process kernel gate may select the frozen coded configuration as a benchmark candidate. Other shapes use a dtype-correct native vendor fallback. Actual poor compression disables coded selection.",
+  "graph_arms": {
+    "strong_vendors": "Retain every original frozen eligible candidate and its own A/A twin, including original head pools; no new algorithm search",
+    "prepared": "Checked prepared linear_out with selected frozen custom candidate or vendor fallback",
+    "prepared_direct": "Same underlying checked kernel/native operation, same physical buffers and frozen configuration",
+    "prepared_direct_aa": "Independent direct-operation timing arm for implementation-overhead A/A",
+    "forced_custom_diagnostics": "Unchanged measure_case raw/coded measurements remain visible; never confuse these with the selected fallback"
+  },
+  "controls": "Native Torch-only wrapper-overhead controls. The unused forced custom diagnostic uses fixed coded_t64_v8 and is never selected, tuned or accepted.",
+  "eager_arms": "Allocation-including synchronized nativeTorch/vendor twin versus selected allocating candidate API. Explicitly separate from graph comparison against the full frozen vendor pool. No GPU monitoring during eager timings.",
+  "numerical_checks": "Unchanged FP64 oracle, every captured output checked, exact weight preservation and prepared/direct bitwise parity; allocating eager outputs checked separately outside timing",
+  "overhead_gate": "Per case: absolute direct A/A<=1% and paired95% lower latency-saved bound>=-1%, with numerical and context checks. All registered controls must pass for a scope to qualify.",
+  "performance_gate": "Original strict per-shape kernel gate>10% remains necessary; no report-level or fallback custom-win claim",
+  "reporting": "All136 cases per output, every failure, raw rounds, graph/eager contexts, storage/setup/packing, input/source/runtime/protocol hashes and provisional per-shape outcomes. No implementation promotion or retry until pass. Later guarded integration requires independent evidence review."
+}

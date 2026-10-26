@@ -1,0 +1,24 @@
+== smollm2-135m fused=False: total kernel time 3480 us, 510 kernels
+   gemv/gemm                    2700 us  77.6%  kernels=270
+   elementwise/norm/other        545 us  15.7%  kernels=180
+   cat/copy                      235 us   6.8%  kernels=60
+          1137 us  std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int,
+           883 us  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64
+           499 us  void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<6
+           236 us  void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c
+           235 us  void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized
+           181 us  void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_
+           146 us  void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunc
+            94 us  void at::native::vectorized_elementwise_kernel<4, at::native::(anonymo
+== qwen2.5-0.5b fused=True: total kernel time 3679 us, 336 kernels
+   gemv/gemm                    3018 us  82.0%  kernels=144
+   elementwise/norm/other        483 us  13.1%  kernels=144
+   cat/copy                      179 us   4.9%  kernels=48
+          1280 us  void gemv2T_kernel_val<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bf
+          1204 us  std::enable_if<!(false), void>::type internal::gemvx::kernel<int, int,
+           388 us  void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<6
+           189 us  void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c
+           179 us  void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized
+           146 us  void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_
+           125 us  void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunc
+           101 us  void at::native::vectorized_elementwise_kernel<4, at::native::(anonymo

@@ -1,0 +1,5 @@
+smollm2-135m: eager 1556us compile 1345us cuda 1415us | cuda vs eager +9.08% compile vs eager +13.69% cuda vs compile -5.32% (ci -5.46..-5.25) aa -0.07%
+smollm2-360m: eager 2874us compile 2630us cuda 2719us | cuda vs eager +5.42% compile vs eager +8.58% cuda vs compile -3.50% (ci -3.60..-3.34) aa +0.03%
+qwen2.5-0.5b: eager 2850us compile 2652us cuda 2726us | cuda vs eager +4.35% compile vs eager +6.86% cuda vs compile -2.69% (ci -2.78..-2.48) aa +0.00%
+tinyllama-1.1b: eager 6374us compile 6162us cuda 6223us | cuda vs eager +2.80% compile vs eager +3.41% cuda vs compile -0.61% (ci -0.76..-0.54) aa -0.10%
+H15 geomean cuda vs eager 5.44% criteria {'a': True, 'b': False} -> NOT SUPPORTED

@@ -1,0 +1,9 @@
+bf16 d=320 M=4: plan 8 saved +10.56% ci +7.58..+10.66 aa +0.06% bits True temp 60C
+bf16 d=320 M=8: plan 8 saved +10.06% ci +10.04..+10.11 aa -0.05% bits True temp 60C
+bf16 d=640 M=4: plan 1 saved +4.45% ci +4.41..+4.55 aa +0.07% bits True temp 60C
+bf16 d=640 M=8: plan 1 saved +5.48% ci +5.45..+5.62 aa -0.04% bits True temp 60C
+bf16 d=896 M=4: plan 2 saved +3.69% ci +3.44..+3.75 aa -0.19% bits True temp 60C
+bf16 d=896 M=8: plan 2 saved +3.42% ci +3.31..+3.48 aa +0.02% bits True temp 60C
+fp32 d=448 M=4: plan 1 saved +15.91% ci +15.87..+15.96 aa +0.03% bits True temp 60C
+fp32 d=448 M=8: plan 1 saved +15.91% ci +15.86..+16.00 aa -0.03% bits True temp 60C
+G2 geomean 8.84% criteria {'a': True, 'b': True, 'c': True} -> SUPPORTED

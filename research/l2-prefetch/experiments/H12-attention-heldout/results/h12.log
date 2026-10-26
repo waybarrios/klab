@@ -1,0 +1,11 @@
+numerics ok: True
+smollm2-360m L=256: sdpa 3172us custom 2814us saved +11.24% ci +11.03..+11.33 aa +0.03%
+smollm2-360m L=1024: sdpa 3294us custom 3018us saved +8.23% ci +8.19..+8.38 aa -0.00%
+smollm2-360m L=2048: sdpa 3380us custom 3238us saved +4.24% ci +4.19..+4.38 aa +0.00%
+qwen2.5-0.5b L=256: sdpa 3097us custom 2823us saved +8.69% ci +8.60..+8.97 aa +0.00%
+qwen2.5-0.5b L=1024: sdpa 3115us custom 2936us saved +5.72% ci +5.03..+5.81 aa -0.03%
+qwen2.5-0.5b L=2048: sdpa 3163us custom 3115us saved +1.41% ci +1.36..+1.51 aa +0.03%
+tinyllama-1.1b L=256: sdpa 6603us custom 6356us saved +3.75% ci +3.68..+3.85 aa -0.03%
+tinyllama-1.1b L=1024: sdpa 6683us custom 6683us saved -0.06% ci -0.11..+0.21 aa +0.12%
+tinyllama-1.1b L=2048: sdpa 6752us custom 6945us saved -2.84% ci -2.99..-2.78 aa +0.05%
+H12 geomean 4.64% criteria {'a': False, 'b': False, 'c': True} -> NOT SUPPORTED

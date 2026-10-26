@@ -1,0 +1,9 @@
+name: Question or experiment idea
+description: Discuss a kernel, a baseline or a contribution before collecting measurements.
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What is the question or idea?
+    validations:
+      required: true

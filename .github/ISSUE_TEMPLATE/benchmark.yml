@@ -1,0 +1,26 @@
+name: Benchmark or reproduction
+description: Share a measured case, a numerical failure or a missing baseline.
+title: ""
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What would you like to investigate?
+      description: A short description of the operation and the question is enough to start.
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Tensor and precision contract
+      description: Include M, N, K, input and weight dtype, accumulation and output dtype, and the numerical tolerance.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and operating conditions
+      description: GPU model, driver/library versions, power profile, AC condition and observed clocks. Omit personal paths and serial identifiers.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Commands and evidence
+      description: Include the baseline routes, raw timing rounds, A/A check and numerical results when available. Negative or partial results are welcome when clearly labeled.

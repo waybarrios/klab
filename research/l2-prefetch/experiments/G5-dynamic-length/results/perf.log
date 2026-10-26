@@ -1,0 +1,6 @@
+h=9 kvh=3 L=192: sdpa 20.27 v4 6.70 v4d(cap 2048) 8.15 us
+h=9 kvh=3 L=640: sdpa 17.32 v4 8.75 v4d(cap 2048) 10.23 us
+h=9 kvh=3 L=1280: sdpa 17.83 v4 11.09 v4d(cap 2048) 10.79 us
+h=32 kvh=4 L=192: sdpa 19.20 v4 7.17 v4d(cap 2048) 12.93 us
+h=32 kvh=4 L=640: sdpa 16.59 v4 14.68 v4d(cap 2048) 16.26 us
+h=32 kvh=4 L=1280: sdpa 18.26 v4 20.05 v4d(cap 2048) 20.61 us

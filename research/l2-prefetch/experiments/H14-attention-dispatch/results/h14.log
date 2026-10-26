@@ -1,0 +1,18 @@
+numerics ok: True
+smollm2-135m L=128: pick custom (micro +74.4%) step sdpa 1869us -> 1416us saved +24.19% ci +24.08..+24.21 aa -0.06%
+smollm2-135m L=384: pick custom (micro +60.9%) step sdpa 1759us -> 1438us saved +18.26% ci +17.97..+18.37 aa -0.06%
+smollm2-135m L=768: pick custom (micro +45.7%) step sdpa 1755us -> 1525us saved +13.17% ci +13.07..+13.18 aa -0.05%
+smollm2-135m L=1536: pick custom (micro +36.5%) step sdpa 1795us -> 1597us saved +11.07% ci +11.01..+11.17 aa -0.00%
+smollm2-360m L=128: pick custom (micro +71.0%) step sdpa 3381us -> 2817us saved +16.67% ci +16.62..+16.75 aa -0.00%
+smollm2-360m L=384: pick custom (micro +58.8%) step sdpa 3278us -> 2889us saved +11.63% ci +11.50..+11.72 aa +0.09%
+smollm2-360m L=768: pick custom (micro +40.5%) step sdpa 3286us -> 3024us saved +7.95% ci +7.88..+8.01 aa +0.00%
+smollm2-360m L=1536: pick custom (micro +16.1%) step sdpa 3419us -> 3321us saved +2.90% ci +2.78..+3.02 aa +0.00%
+qwen2.5-0.5b L=128: pick custom (micro +71.0%) step sdpa 3261us -> 2822us saved +13.42% ci +13.23..+13.62 aa +0.00%
+qwen2.5-0.5b L=384: pick custom (micro +55.4%) step sdpa 3167us -> 2873us saved +9.21% ci +9.05..+9.27 aa -0.03%
+qwen2.5-0.5b L=768: pick custom (micro +36.9%) step sdpa 3167us -> 2982us saved +5.82% ci +5.72..+5.89 aa +0.06%
+qwen2.5-0.5b L=1536: pick custom (micro +24.2%) step sdpa 3200us -> 3071us saved +3.99% ci +3.76..+4.06 aa +0.06%
+tinyllama-1.1b L=128: pick custom (micro +68.1%) step sdpa 6832us -> 6390us saved +6.49% ci +6.41..+6.54 aa -0.01%
+tinyllama-1.1b L=384: pick custom (micro +49.2%) step sdpa 7133us -> 6811us saved +4.55% ci +4.50..+4.64 aa -0.04%
+tinyllama-1.1b L=768: pick custom (micro +6.0%) step sdpa 7158us -> 7128us saved +0.33% ci +0.30..+0.52 aa -0.01%
+tinyllama-1.1b L=1536: pick sdpa (micro -34.7%) step sdpa 9091us -> 9092us saved -0.01% ci -0.07..+0.00 aa +0.00%
+H14 geomean 9.62% criteria {'a': True, 'b': True, 'c': True} -> SUPPORTED

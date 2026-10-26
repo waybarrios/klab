@@ -1,0 +1,4 @@
+heads 15/5 capacity 700: 35 replays of one graph, worst err 2.00e-03
+heads 9/3 capacity 1500: 35 replays of one graph, worst err 1.93e-03
+heads 32/4 capacity 3000: 35 replays of one graph, worst err 1.72e-03
+G5(b): PASS

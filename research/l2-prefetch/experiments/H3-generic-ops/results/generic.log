@@ -1,0 +1,9 @@
+('mlp', 256, 1024, 1) bytes/stage=512KiB torch=8.512us/stage plan=2 policy +0.45% | torch_aa:+0.2 x_hint_b1:-10.2 x_hint_b2:+0.5 x_hint_b4:+2.3 x_hint_b8:+2.8
+('mlp', 384, 1536, 1) bytes/stage=1152KiB torch=8.988us/stage plan=2 policy +2.69% | torch_aa:+0.1 x_hint_b1:-10.4 x_hint_b2:+2.7 x_hint_b4:-0.5 x_hint_b8:-4.8
+('mlp', 512, 1024, 4) bytes/stage=1024KiB torch=9.510us/stage plan=2 policy +11.99% | torch_aa:+0.0 x_hint_b1:+12.1 x_hint_b2:+11.9 x_hint_b4:+5.4 x_hint_b8:-9.2
+('mlp', 512, 1024, 16) bytes/stage=1024KiB torch=9.664us/stage plan=2 policy +7.80% | torch_aa:+0.0 x_hint_b1:+9.3 x_hint_b2:+7.2 x_hint_b4:+2.3 x_hint_b8:-11.5
+('conv', 128, 14, 1) bytes/stage=288KiB torch=17.663us/stage plan=None policy -0.02% | torch_aa:+0.0 x_hint_b1:+1.9 x_hint_b2:+0.9 x_hint_b4:+2.1 x_hint_b8:+2.3
+('conv', 256, 7, 1) bytes/stage=1152KiB torch=33.365us/stage plan=None policy +0.04% | torch_aa:+0.0 x_hint_b1:-6.4 x_hint_b2:-9.0 x_hint_b4:-11.7 x_hint_b8:-16.0
+('conv', 256, 14, 1) bytes/stage=1152KiB torch=34.844us/stage plan=None policy +0.04% | torch_aa:+0.0 x_hint_b1:-1.4 x_hint_b2:-2.0 x_hint_b4:-4.2 x_hint_b8:-7.2
+('conv', 64, 28, 1) bytes/stage=72KiB torch=13.723us/stage plan=None policy -0.01% | torch_aa:-0.0 x_hint_b1:+2.9 x_hint_b2:+2.8 x_hint_b4:+2.3 x_hint_b8:+2.3
+exit=0

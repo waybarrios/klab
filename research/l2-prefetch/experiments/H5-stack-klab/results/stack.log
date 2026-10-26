@@ -1,0 +1,6 @@
+fp32 d=256 M=1 torch=3.42us | torch_pf +6.0% klab(tiny_t128_v1) +25.0% klab_pf +27.9% aa +0.09% bits True/True rel=1.1e-06 pf_t=(8, 256) pf_k=(8, 256)
+fp32 d=256 M=4 torch=3.57us | torch_pf +12.6% klab(tiny_t64_v4) +19.6% klab_pf +21.1% aa +0.09% bits True/True rel=2.0e-06 pf_t=(1, 256) pf_k=(2, 256)
+fp32 d=384 M=1 torch=5.65us | torch_pf +12.6% klab(warp_t32_v4) +45.8% klab_pf +55.7% aa +0.00% bits True/True rel=1.2e-06 pf_t=(4, 576) pf_k=(8, 576)
+fp32 d=384 M=4 torch=4.92us | torch_pf +17.5% klab(warp_t128_v4) +25.2% klab_pf +25.1% aa +0.00% bits True/True rel=1.1e-06 pf_t=(8, 576) pf_k=None
+fp32 d=512 M=1 torch=5.61us | torch_pf +22.0% klab(tiny_t128_v1) +22.4% klab_pf +35.3% aa +0.00% bits True/True rel=2.0e-06 pf_t=(4, 1024) pf_k=(2, 512)
+fp32 d=512 M=4 torch=6.37us | torch_pf +20.3% klab(tiny_t128_v1) +10.9% klab_pf +18.3% aa +0.00% bits True/True rel=1.2e-06 pf_t=(2, 1024) pf_k=(1, 512)

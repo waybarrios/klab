@@ -1,0 +1,32 @@
+{
+  "kind": "native-precision-figure-provenance",
+  "inputs": [
+    {
+      "path": "results/native-precision-performance-fp32-evidence-r1.json",
+      "sha256": "53e3b1a9f149dc86b66e202a6adc94d47306fcb73a0e53914817f0f2738809ba"
+    },
+    {
+      "path": "results/native-precision-performance-fp16-evidence-r1.json",
+      "sha256": "d2bc8f19109d3cb3d9d53642dbe1dda20f6cd886575b6f85f5776f59ab13df4a"
+    },
+    {
+      "path": "results/native-precision-performance-bf16-evidence-r1.json",
+      "sha256": "306c79cc89d0ecfa6c63c84b82c0d89197c2b4b9da16a6aaa770e7a9c47dd9ba"
+    },
+    {
+      "path": "results/native-precision-battery-fp32-evidence-r1.json",
+      "sha256": "2529031fc9e37976a1deaadb38443c2c8ad95bada2b88bcece877f14af1788eb"
+    },
+    {
+      "path": "results/native-precision-battery-fp16-evidence-r1.json",
+      "sha256": "989d712c1d9c3a1ef172d1bebeaede174d362df7f640abe525379b826008ca17"
+    },
+    {
+      "path": "results/native-precision-battery-bf16-evidence-r1.json",
+      "sha256": "3227cbe1af9d4dba2563889442484f812f774222962c5df6a45054dd57edfb70"
+    }
+  ],
+  "generator_sha256": "cb919efd2efe0e10dec6164cac7e269889c120a185635fbecfe8dfa0b90de1b6",
+  "raw_cases": 126,
+  "scope": "Every registered process shown. Three-process shape gates, no pooled CI. No model/energy/unlocked claim."
+}

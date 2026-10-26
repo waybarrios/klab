@@ -1,0 +1,11 @@
+{
+  "base_spec": "experiments/consumer_ampere_bf16.json",
+  "status": "declared during training, before any held-out measurement",
+  "observation": "Performance profile and AC remained active while the reported CPU maximum changed from 100% to 90% and back; reason not established",
+  "graph_context": "Bind profile name and AC state. Preserve complete CPU/display snapshots per case. Compare GPU memory clocks from samples wholly inside randomized timed rounds. Keep the registered numerical, raw-parity, A/A and confidence gates unchanged.",
+  "eager_context": "Separate contract. Bind CPU policy as well as profile name and AC. Graph results cannot promote eager performance.",
+  "telemetry": "Capture, warmup, timed measurement and completion are separately tagged. Boundary samples do not determine the timed memory-clock cohort. Preserve throttle flags in raw data; no claim of unrestricted peak clocks or absence of power limits.",
+  "discarded_attempts": ["results/compressed-performance-bf16-tune-r1.json", "results/compressed-performance-bf16-tune-r1b.json"],
+  "candidate_search": "CUDA revision remains 1 with the same eight launch configurations. Repeating interrupted training does not add kernel revisions or inspect held-out data.",
+  "system_changes": "None. Performance and current brightness remain under the user's control. No clock, voltage, driver, firmware or daemon modification."
+}

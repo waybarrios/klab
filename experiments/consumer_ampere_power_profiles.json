@@ -1,0 +1,12 @@
+{
+  "base_spec": "experiments/consumer_ampere_bf16.json",
+  "extension": "User requested both current and Performance profiles before either new-profile compressed-kernel claim is accepted",
+  "profiles": ["battery", "performance"],
+  "order": ["battery", "performance"],
+  "input_policy": "identical checkpoint bits, seed901 prototype activations, CUDA source/PTX, eight launch configurations and frozen vendor algorithm pool",
+  "comparison_policy": "retime all frozen vendor routes and custom kernels within each profile; report profiles separately; no cross-profile ratio attributed to the kernel",
+  "profile_control": "normal system76-power profile command only; no sudo/password, no firmware/driver/boot/clock/voltage/custom-power-limit changes",
+  "restore_initial_profile": true,
+  "initial_observed_profile": "battery on AC",
+  "held_out_validation_still_required": true
+}

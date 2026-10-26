@@ -1,0 +1,8 @@
+numerics smollm2-135m: worst custom err 2.91e-04 vs sdpa 2.91e-04 (len 2047)
+numerics qwen2.5-0.5b: worst custom err 2.41e-04 vs sdpa 2.70e-04 (len 2047)
+(a) numerics all passed: True
+(b) micro smollm2-135m: sdpa 19.32us custom 11.06us speedup 1.75x (aa +0.02%)  [includes the x*0 add per call]
+(b) micro qwen2.5-0.5b: sdpa 18.67us custom 11.06us speedup 1.69x (aa +0.00%)  [includes the x*0 add per call]
+(c) step smollm2-135m: sdpa 1749us custom 1496us saved +14.41% ci +14.40..+14.55 aa -0.06%
+(c) step qwen2.5-0.5b: sdpa 3108us custom 2864us saved +7.55% ci +7.48..+7.68 aa -0.04%
+H11 criteria: {'a': True, 'b': False, 'c': False} -> NOT SUPPORTED

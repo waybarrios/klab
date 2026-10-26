@@ -1,0 +1,4 @@
+h=9 kvh=3 capacity=1024: 39 replays of one graph, worst err 1.94e-03
+h=32 kvh=4 capacity=2048: 39 replays of one graph, worst err 1.95e-03
+h=14 kvh=2 capacity=300: 39 replays of one graph, worst err 3.87e-03
+G5 dynamic-length check: PASS

@@ -1,0 +1,63 @@
+== smollm2-135m fused=False M=1
+  pos 0 (648 KiB): best b1_648k -0.26% -> plan None
+  pos 1 (216 KiB): best b8_216k -0.62% -> plan None
+  pos 2 (216 KiB): best b8_216k -0.84% -> plan None
+  pos 3 (1032 KiB): best b4_1024k -2.29% -> plan None
+  pos 4 (1728 KiB): best b1_1728k -0.14% -> plan None
+  pos 5 (1728 KiB): best b2_512k -0.89% -> plan None
+  pos 6 (1728 KiB): best b2_1024k +1.37% -> plan {'blocks': 2, 'kernel': 'l2_hint', 'stride': 128, 'nbytes': 1048576}
+   step torch=2188.3us tuned=2160.6us saved +1.22% ci=+1.21..+1.27 aa=+0.09 bit=True calib=7s
+== smollm2-135m fused=False M=4
+  pos 0 (648 KiB): best b1_648k -0.45% -> plan None
+  pos 1 (216 KiB): best b4_216k -0.77% -> plan None
+  pos 2 (216 KiB): best b1_216k -0.97% -> plan None
+  pos 3 (1032 KiB): best b2_1024k +0.45% -> plan None
+  pos 4 (1728 KiB): best b8_512k -0.89% -> plan None
+  pos 5 (1728 KiB): best b2_512k -1.37% -> plan None
+  pos 6 (1728 KiB): best b2_512k -0.37% -> plan None
+   step torch=2761.7us tuned=2761.7us saved +0.03% ci=-0.04..+0.07 aa=+0.00 bit=True calib=5s
+== smollm2-135m fused=True M=1
+  pos 0 (1080 KiB): best b1_512k +1.08% -> plan {'blocks': 1, 'kernel': 'l2_hint', 'stride': 128, 'nbytes': 524288}
+  pos 1 (1032 KiB): best b1_1024k +0.17% -> plan None
+  pos 2 (3456 KiB): best b1_3456k +4.64% -> plan {'blocks': 1, 'kernel': 'l2_hint', 'stride': 128, 'nbytes': 3538944}
+  pos 3 (1728 KiB): best b2_512k -0.18% -> plan None
+   step torch=1809.4us tuned=1713.2us saved +5.27% ci=+5.11..+5.42 aa=+0.00 bit=True calib=3s
+== smollm2-135m fused=True M=4
+  pos 0 (1080 KiB): best b1_1080k +0.68% -> plan None
+  pos 1 (1032 KiB): best b1_1032k -1.40% -> plan None
+  pos 2 (3456 KiB): best b1_3456k +2.86% -> plan {'blocks': 1, 'kernel': 'l2_hint', 'stride': 128, 'nbytes': 3538944}
+  pos 3 (1728 KiB): best b1_512k -1.65% -> plan None
+   step torch=2280.4us tuned=2215.9us saved +2.87% ci=+2.83..+2.96 aa=-0.04 bit=True calib=3s
+== qwen2.5-0.5b fused=False M=1
+  pos 0 (1568 KiB): best b8_512k -0.19% -> plan None
+  pos 1 (224 KiB): best b2_224k -0.16% -> plan None
+  pos 2 (224 KiB): best b2_224k -0.34% -> plan None
+  pos 3 (1824 KiB): best b1_1824k +0.00% -> plan None
+  pos 4 (8512 KiB): best b1_1024k +0.84% -> plan None
+  pos 5 (8512 KiB): best b8_512k -0.72% -> plan None
+  pos 6 (8512 KiB): best b2_512k -0.41% -> plan None
+   step torch=3273.7us tuned=3273.7us saved +0.03% ci=-0.09..+0.09 aa=-0.03 bit=True calib=5s
+== qwen2.5-0.5b fused=False M=4
+  pos 0 (1568 KiB): best b1_512k -8.10% -> plan None
+  pos 1 (224 KiB): best b2_224k -0.58% -> plan None
+  pos 2 (224 KiB): best b2_224k -0.53% -> plan None
+  pos 3 (1824 KiB): best b4_512k -0.53% -> plan None
+  pos 4 (8512 KiB): best b1_1024k -0.52% -> plan None
+  pos 5 (8512 KiB): best b2_512k -1.14% -> plan None
+  pos 6 (8512 KiB): best b2_512k -0.71% -> plan None
+   step torch=3698.7us tuned=3699.6us saved -0.00% ci=-0.11..+0.14 aa=-0.03 bit=True calib=5s
+== qwen2.5-0.5b fused=True M=1
+  pos 0 (2016 KiB): best b1_512k +0.97% -> plan None
+  pos 1 (1824 KiB): best b2_1024k -0.36% -> plan None
+  pos 2 (17024 KiB): best b1_1024k +1.13% -> plan {'blocks': 1, 'kernel': 'l2_hint', 'stride': 128, 'nbytes': 1048576}
+  pos 3 (8512 KiB): best b1_512k -0.26% -> plan None
+   step torch=3270.6us tuned=3235.8us saved +1.07% ci=+0.97..+1.13 aa=+0.06 bit=True calib=3s
+== qwen2.5-0.5b fused=True M=4
+  pos 0 (2016 KiB): best b4_512k -1.68% -> plan None
+  pos 1 (1824 KiB): best b2_1024k -0.85% -> plan None
+  pos 2 (17024 KiB): best b4_1024k -0.88% -> plan None
+  pos 3 (8512 KiB): best b2_1024k -0.96% -> plan None
+   step torch=3899.4us tuned=3899.4us saved -0.08% ci=-0.21..+0.00 aa=+0.06 bit=True calib=3s
+
+H7: n=8 geomean 1.32% a=False b=True c=True -> NOT SUPPORTED
+exit=0

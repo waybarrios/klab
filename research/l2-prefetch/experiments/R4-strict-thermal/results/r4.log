@@ -1,0 +1,10 @@
+numerics ok: True
+smollm2-135m L=192: pick custom prefetch-positions 2/4 | base 2323us dispatch +28.74% full +31.13% (ci +31.01..+31.25) aa +0.00%
+smollm2-135m L=640: pick custom prefetch-positions 2/4 | base 2085us dispatch +18.31% full +20.21% (ci +20.11..+20.25) aa +0.00%
+smollm2-135m L=1280: pick custom prefetch-positions 3/4 | base 2020us dispatch +12.83% full +12.23% (ci +12.13..+12.40) aa +0.00%
+smollm2-360m L=192: pick custom prefetch-positions 1/4 | base 3112us dispatch +17.09% full +18.97% (ci +18.91..+19.09) aa +0.00%
+smollm2-360m L=640: pick custom prefetch-positions 0/4 | base 3015us dispatch +10.93% full +10.95% (ci +10.93..+11.01) aa +0.07%
+smollm2-360m L=1280: pick custom prefetch-positions 0/4 | base 3077us dispatch +6.44% full +6.39% (ci +6.35..+6.58) aa -0.07%
+qwen2.5-0.5b L=192: pick custom prefetch-positions 2/4 | base 3017us dispatch +13.39% full +16.66% (ci +16.53..+16.73) aa -0.02%
+qwen2.5-0.5b L=640: pick custom prefetch-positions 2/4 | base 2917us dispatch +7.89% full +11.20% (ci +11.16..+11.26) aa +0.01%
+qwen2.5-0.5b L=1280: pick custom prefetch-positions 2/4 | base 2920us dispatch +3.96% full +7.82% (ci +7.75..+7.88) aa -0.07%

@@ -1,0 +1,14 @@
+numerics ok: True
+smollm2-135m L=192: pick custom prefetch-positions 2/4 | base 2316us dispatch +28.51% full +30.79% (ci +30.68..+30.80) aa +0.04%
+smollm2-135m L=640: pick custom prefetch-positions 2/4 | base 2137us dispatch +18.39% full +20.42% (ci +20.29..+20.46) aa -0.00%
+smollm2-135m L=1280: pick custom prefetch-positions 3/4 | base 2116us dispatch +13.66% full +12.11% (ci +12.05..+12.15) aa +0.05%
+smollm2-360m L=192: pick custom prefetch-positions 1/4 | base 3123us dispatch +17.21% full +19.24% (ci +19.18..+19.34) aa -0.03%
+smollm2-360m L=640: pick custom prefetch-positions 0/4 | base 3016us dispatch +11.00% full +10.92% (ci +10.77..+10.99) aa +0.03%
+smollm2-360m L=1280: pick custom prefetch-positions 0/4 | base 3077us dispatch +6.64% full +6.62% (ci +6.52..+6.72) aa -0.03%
+qwen2.5-0.5b L=192: pick custom prefetch-positions 2/4 | base 3014us dispatch +13.33% full +16.67% (ci +16.52..+16.77) aa +0.00%
+qwen2.5-0.5b L=640: pick custom prefetch-positions 2/4 | base 2959us dispatch +8.25% full +11.31% (ci +11.16..+11.43) aa +0.07%
+qwen2.5-0.5b L=1280: pick custom prefetch-positions 2/4 | base 2920us dispatch +3.93% full +7.75% (ci +7.71..+7.88) aa -0.07%
+tinyllama-1.1b L=192: pick custom prefetch-positions 0/4 | base 6538us dispatch +6.25% full +6.20% (ci +6.07..+6.25) aa +0.05%
+tinyllama-1.1b L=640: pick custom prefetch-positions 0/4 | base 6406us dispatch +0.97% full +0.99% (ci +0.86..+1.18) aa -0.03%
+tinyllama-1.1b L=1280: pick sdpa prefetch-positions 0/4 | base 6401us dispatch +0.02% full -0.06% (ci -0.10..+0.03) aa +0.03%
+H16 geomean full 12.36% (dispatch only 11.07%) criteria {'a': True, 'b': True, 'c': True} -> SUPPORTED

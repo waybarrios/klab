@@ -1,0 +1,58 @@
+# Local environments, generated binaries and experiment locks
+/.venv/
+/.cache/
+/.scratch/
+/bin/
+/native/build/
+/rust/
+__pycache__/
+*.pyc
+*.so
+*.o
+*.new
+
+# Local agent state and implementation conversations
+/.pi/
+/.superpowers/
+/.claude/
+/docs/superpowers/
+/notes/opus-*.md
+/notes/cache-pruning-*.md
+
+# Optional external source trees, firmware, models and binaries
+/third_party/
+*.safetensors
+*.gguf
+*.ko
+*.bin
+
+# Raw experiment history is released as a compressed evidence snapshot.
+# Keep the small original configuration references needed by frozen_cases.
+/results/*
+!/results/adaptive-search.json
+!/results/fp16-search.json
+!/results/bf16-search.json
+!/results/lossless-compact.json
+!/results/compressed-performance-bf16-search-r2.json
+!/results/compressed-performance-fp32-search-r2.json
+!/results/public/
+
+# This regression tests a machine-local background supervisor.
+/tests/test_frozen_cohort_batch.py
+
+# Agent-generated working notes and intermediate research write-ups (kept locally, not published)
+/.remember/
+/notes/
+/docs/
+/QUICKSTART.md
+/ROADMAP.md
+/examples/README.md
+/research/**/*.md
+!/research/README.md
+/research/l2-prefetch/research-state.yaml
+/research/l2-prefetch/literature/
+/research/l2-prefetch/paper/
+/research/l2-prefetch/to_human/
+!/docs/
+/docs/*
+!/docs/bf16-format.md

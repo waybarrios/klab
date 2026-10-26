@@ -1,0 +1,46 @@
+[
+ {
+  "model": "smollm2-135m",
+  "step_us": {
+   "A_cat": 1799.0080118179321,
+   "B_static": 1747.9679584503174,
+   "C_no_attn": 1248.095989227295,
+   "D_gemv_only": 947.2000002861023
+  },
+  "floor_us": 629.6521348314607,
+  "weight_bytes": 212336640,
+  "kv_bytes": 11819520,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P8, 405 MHz, 210 MHz, 59, 16.89 W, 0x0000000000000001",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1635 MHz, 62, 61.01 W, 0x0000000000000000",
+   "ac_online": "1"
+  }
+ },
+ {
+  "model": "qwen2.5-0.5b",
+  "step_us": {
+   "A_cat": 3142.656087875366,
+   "B_static": 3103.7440299987793,
+   "C_no_attn": 2633.72802734375,
+   "D_gemv_only": 2316.2879943847656
+  },
+  "floor_us": 2027.9687191011235,
+  "weight_bytes": 715653120,
+  "kv_bytes": 6303744,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1635 MHz, 61, 59.67 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1470 MHz, 64, 79.95 W, 0x0000000000000004",
+   "ac_online": "1"
+  }
+ }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "Eager direct-wrapper versus registered-op diagnostic",
+  "schema_version": 1,
+  "registration": "After initial full-grid eager regressions and before this component diagnostic",
+  "purpose": "Separate the unchanged checked CUDA wrapper from the registered Python custom-op call path before deciding whether a native C++ Torch binding is warranted",
+  "kernel_evidence": "results/compressed-performance-bf16-evidence-r2.json",
+  "cases": [
+    {"weight_tensor": "model.layers.8.self_attn.q_proj.weight", "shape_mnk": [2, 896, 896]},
+    {"weight_tensor": "model.layers.8.mlp.gate_proj.weight", "shape_mnk": [1, 4864, 896]},
+    {"weight_tensor": "model.layers.8.mlp.down_proj.weight", "shape_mnk": [1, 896, 4864]}
+  ],
+  "seed": 919,
+  "rounds": 31,
+  "input_and_output_dtype": "bf16",
+  "accumulation": "FP32, no lossy weights or reduced-precision BF16 reduction",
+  "arms": ["torch", "torch_aa", "direct_wrapper", "registered_op"],
+  "physical_weight_ring_minimum_bytes": 83886080,
+  "settings_changes_allowed": false,
+  "custom_configuration_search_allowed": false,
+  "maximum_complete_runs": 1,
+  "measurement": "Unchanged synchronized allocation-including bench_dispatch._eager; no monitoring during timing. Same physical packed buffers for both custom arms, same x and actual original weight bits for every arm.",
+  "numerics": "Unchanged FP64 gate on all copies before and after timing, exact decoded weights, source/runtime/context hashes retained",
+  "interpretation": "Diagnostic only. Compare registered_op with direct_wrapper and both with nativeTorch. Do not identify a particular CPU/driver cause from timing alone, promote an implementation, tune kernels or retrofit earlier failures."
+}

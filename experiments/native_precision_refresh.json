@@ -1,0 +1,245 @@
+{
+  "name": "Native FP32/FP16/BF16 frozen primitive refresh against the complete vendor pool",
+  "registration": "Before the first measurement of this fresh cohort; historical configurations reused, no new tuning",
+  "schema_version": 1,
+  "source_profiles": {
+    "fp32": {
+      "path": "results/adaptive-search.json",
+      "sha256": "1ad1d9c45c356c170ac34995c4f8dac1d19ab19c294ed7050c065bed8f35d409"
+    },
+    "fp16": {
+      "path": "results/fp16-search.json",
+      "sha256": "914eeae575aff050cd528e328bb1217305dcb046614a3a0c6a550812b59dd21b"
+    },
+    "bf16": {
+      "path": "results/bf16-search.json",
+      "sha256": "001a173b73cd041260121076170118f8a9f13ccb50ca3eeb0ecd91f52cb73edc"
+    },
+    "fp32_large": {
+      "path": "results/lossless-compact.json",
+      "sha256": "9fb35d6a2e7280d993f4ad684954a807da0dfd4ce39571bd3c18ad98f7d1b369"
+    }
+  },
+  "cases_by_dtype": {
+    "fp32": [
+      {
+        "shape_mnk": [
+          1,
+          64,
+          64
+        ],
+        "config": "tiny_t128_v1",
+        "origin": "fp32"
+      },
+      {
+        "shape_mnk": [
+          1,
+          128,
+          128
+        ],
+        "config": "warp_t32_v4",
+        "origin": "fp32"
+      },
+      {
+        "shape_mnk": [
+          1,
+          256,
+          256
+        ],
+        "config": "tiny_t32_v4",
+        "origin": "fp32"
+      },
+      {
+        "shape_mnk": [
+          1,
+          512,
+          512
+        ],
+        "config": "lossless_t32",
+        "origin": "fp32"
+      },
+      {
+        "shape_mnk": [
+          1,
+          1024,
+          1024
+        ],
+        "config": "fp28_t128",
+        "origin": "fp32"
+      },
+      {
+        "shape_mnk": [
+          4,
+          256,
+          256
+        ],
+        "config": "tiny_t128_v1",
+        "origin": "fp32"
+      },
+      {
+        "shape_mnk": [
+          1,
+          4096,
+          4096
+        ],
+        "config": "lossless_t128",
+        "origin": "fp32_large"
+      },
+      {
+        "shape_mnk": [
+          1,
+          11008,
+          4096
+        ],
+        "config": "lossless_t64",
+        "origin": "fp32_large"
+      },
+      {
+        "shape_mnk": [
+          1,
+          4096,
+          11008
+        ],
+        "config": "lossless_t32",
+        "origin": "fp32_large"
+      }
+    ],
+    "fp16": [
+      {
+        "shape_mnk": [
+          1,
+          64,
+          64
+        ],
+        "config": "half_t256_v2",
+        "origin": "fp16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          128,
+          128
+        ],
+        "config": "half_t128_v8",
+        "origin": "fp16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          256,
+          256
+        ],
+        "config": "half_t64_v8",
+        "origin": "fp16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          512,
+          512
+        ],
+        "config": "half_t256_v8",
+        "origin": "fp16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          1024,
+          1024
+        ],
+        "config": "half_t256_v8",
+        "origin": "fp16"
+      },
+      {
+        "shape_mnk": [
+          4,
+          256,
+          256
+        ],
+        "config": "half_t256_v8",
+        "origin": "fp16"
+      }
+    ],
+    "bf16": [
+      {
+        "shape_mnk": [
+          1,
+          64,
+          64
+        ],
+        "config": "half_t128_v2",
+        "origin": "bf16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          128,
+          128
+        ],
+        "config": "half_t256_v8",
+        "origin": "bf16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          256,
+          256
+        ],
+        "config": "half_t128_v8",
+        "origin": "bf16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          512,
+          512
+        ],
+        "config": "half_t128_v8",
+        "origin": "bf16"
+      },
+      {
+        "shape_mnk": [
+          1,
+          1024,
+          1024
+        ],
+        "config": "half_t256_v8",
+        "origin": "bf16"
+      },
+      {
+        "shape_mnk": [
+          4,
+          256,
+          256
+        ],
+        "config": "half_t32_v8",
+        "origin": "bf16"
+      }
+    ]
+  },
+  "profiles": [
+    "performance",
+    "battery"
+  ],
+  "ac_online": true,
+  "held_out_seeds": [
+    971,
+    977,
+    983
+  ],
+  "minimum_rounds": 31,
+  "maximum_measured_processes_per_seed_profile_dtype": 1,
+  "preflight_failures": "Preserve launch error; retry environmental preflight only when no timed case exists",
+  "configuration_search_allowed": false,
+  "code_changes_allowed": false,
+  "contracts": "Inputs and weights natively sampled in the requested dtype; FP32 accumulation/output. Original FP32 weights stay FP32. No lossy conversion, TF32 or reduced precision accumulation.",
+  "inputs": "One seeded synthetic weight and activation tensor per shape; distinct original weight copies >=max(80MiB,20*L2), each copy bitwise identical. No checkpoint or captured-activation claim.",
+  "vendor_pool": "Up to8 cuBLASLt heuristics for each original/transposed layout; FP32 compute and allowed reduction types only, shared64MiBworkspace; plain/packed strict cuBLAS GEMM, Torch mm, plus FP32 GEMV for M1. Each vendor has its own A/A twin; vendor algorithm discovery outside timing, all tested routes retained.",
+  "measurement": "Captured streaming GPU work, >=31 randomized paired rounds, no eviction kernel. Graph replay excludes host dispatch/setup/allocator costs. No eager or full-model claim.",
+  "numerics": "Unchanged FP64 oracle and original tolerances, all captured output elements checked, before/after timing, exact weight/input preservation and packed FP32 roundtrip. Invalid vendors and custom failures retained.",
+  "acceptance": "Each case must pass all numerical/input/context checks and have one stable observed memory-clock regime, matching across all3processes in its cohort; abs(fastest eligible vendor own A/A)<=1%; paired95% latency-saved lower bound>10%, best eligible vendor reselected within each2000draw bootstrap. All3fresh processes required per dtype/shape/profile.",
+  "power": "Normal system76-power profiles only, same AC condition, restore initial profile/brightness in finally. No clocks, voltage, power-limit or driver changes.",
+  "provenance": "Report original profileSHA/choices, exact sources/PTX/bridge and cuBLAS/runtime binaries, actual GPU UUID/kernel/unlock flags, raw rounds, input bytesSHA, telemetry/context/setup/storage; never claim hardware-unlocked comparison without actual data.",
+  "unsupported_formats": "SM86 has no native FP8/FP4 Tensor Core math. No lossy emulation in this exact-weight study; unsupported entries stay explicit.",
+  "precision_reference": "https://docs.nvidia.com/cuda/parallel-thread-execution/#warp-level-matrix-instructions-mma"
+}

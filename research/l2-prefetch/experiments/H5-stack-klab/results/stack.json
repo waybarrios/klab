@@ -1,0 +1,435 @@
+[
+ {
+  "d": 256,
+  "m": 1,
+  "layers": 320,
+  "klab_config": "tiny_t128_v1",
+  "pf_torch": {
+   "blocks": 8,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 262144
+  },
+  "pf_klab": {
+   "blocks": 8,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 262144
+  },
+  "bit_torch_pair": true,
+  "bit_klab_pair": true,
+  "klab_vs_torch_rel_l2": 1.1147569787485428e-06,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P8, 405 MHz, 210 MHz, 64, 17.98 W, 0x0000000000000001",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1320 MHz, 65, 32.35 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "arms": {
+   "torch": {
+    "us_per_op": 3.420799970626831,
+    "saved_pct": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "torch_aa": {
+    "us_per_op": 3.4175999462604523,
+    "saved_pct": 0.09380934751721526,
+    "ci95": [
+     -0.18744285611413947,
+     3.967537234272045
+    ]
+   },
+   "torch_pf": {
+    "us_per_op": 3.2159999012947083,
+    "saved_pct": 5.981310444847965,
+    "ci95": [
+     5.8106848974301295,
+     9.293281282000432
+    ]
+   },
+   "klab": {
+    "us_per_op": 2.566399984061718,
+    "saved_pct": 24.976613479347986,
+    "ci95": [
+     24.859285978724166,
+     27.772765888566497
+    ]
+   },
+   "klab_pf": {
+    "us_per_op": 2.470099925994873,
+    "saved_pct": 27.850467238878796,
+    "ci95": [
+     27.6363492677716,
+     30.38773337257933
+    ]
+   }
+  }
+ },
+ {
+  "d": 256,
+  "m": 4,
+  "layers": 320,
+  "klab_config": "tiny_t64_v4",
+  "pf_torch": {
+   "blocks": 1,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 262144
+  },
+  "pf_klab": {
+   "blocks": 2,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 262144
+  },
+  "bit_torch_pair": true,
+  "bit_klab_pair": true,
+  "klab_vs_torch_rel_l2": 1.9976016840650376e-06,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1320 MHz, 65, 32.04 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1635 MHz, 66, 40.47 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "arms": {
+   "torch": {
+    "us_per_op": 3.574400022625923,
+    "saved_pct": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "torch_aa": {
+    "us_per_op": 3.5679999738931656,
+    "saved_pct": 0.08960641711296402,
+    "ci95": [
+     0.0,
+     0.26833835456836486
+    ]
+   },
+   "torch_pf": {
+    "us_per_op": 3.123199939727783,
+    "saved_pct": 12.556055543995226,
+    "ci95": [
+     12.466368761770086,
+     12.697967945699029
+    ]
+   },
+   "klab": {
+    "us_per_op": 2.873600088059902,
+    "saved_pct": 19.588554104020105,
+    "ci95": [
+     19.50469446341023,
+     19.606085780269776
+    ]
+   },
+   "klab_pf": {
+    "us_per_op": 2.8192000463604927,
+    "saved_pct": 21.137598729261388,
+    "ci95": [
+     21.057346333600623,
+     21.255605554399526
+    ]
+   }
+  }
+ },
+ {
+  "d": 384,
+  "m": 1,
+  "layers": 143,
+  "klab_config": "warp_t32_v4",
+  "pf_torch": {
+   "blocks": 4,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 589824
+  },
+  "pf_klab": {
+   "blocks": 8,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 589824
+  },
+  "bit_torch_pair": true,
+  "bit_klab_pair": true,
+  "klab_vs_torch_rel_l2": 1.1927377734654505e-06,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1635 MHz, 66, 40.47 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1635 MHz, 67, 48.38 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "arms": {
+   "torch": {
+    "us_per_op": 5.649902187027298,
+    "saved_pct": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "torch_aa": {
+    "us_per_op": 5.642517463310615,
+    "saved_pct": 0.003961662030094182,
+    "ci95": [
+     -0.2859888333031746,
+     0.4630186910975942
+    ]
+   },
+   "torch_pf": {
+    "us_per_op": 4.933818236931221,
+    "saved_pct": 12.570502057506005,
+    "ci95": [
+     12.472200664514045,
+     12.801015306843999
+    ]
+   },
+   "klab": {
+    "us_per_op": 3.0637202146170024,
+    "saved_pct": 45.76485562844881,
+    "ci95": [
+     45.62100464762404,
+     45.839943559252184
+    ]
+   },
+   "klab_pf": {
+    "us_per_op": 2.4991329316492683,
+    "saved_pct": 55.65438243409646,
+    "ci95": [
+     55.5131884836207,
+     55.76679296523911
+    ]
+   }
+  }
+ },
+ {
+  "d": 384,
+  "m": 4,
+  "layers": 143,
+  "klab_config": "warp_t128_v4",
+  "pf_torch": {
+   "blocks": 8,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 589824
+  },
+  "pf_klab": null,
+  "bit_torch_pair": true,
+  "bit_klab_pair": true,
+  "klab_vs_torch_rel_l2": 1.128612729953257e-06,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1635 MHz, 67, 48.38 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1605 MHz, 67, 52.12 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "arms": {
+   "torch": {
+    "us_per_op": 4.9241956297334255,
+    "saved_pct": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "torch_aa": {
+    "us_per_op": 4.919496449557218,
+    "saved_pct": 0.0,
+    "ci95": [
+     -0.1420465350401745,
+     0.11970313622217121
+    ]
+   },
+   "torch_pf": {
+    "us_per_op": 4.060195876168204,
+    "saved_pct": 17.467246540372138,
+    "ci95": [
+     17.045451914684772,
+     17.584365202801745
+    ]
+   },
+   "klab": {
+    "us_per_op": 3.673510534780009,
+    "saved_pct": 25.19821265507225,
+    "ci95": [
+     24.680848639608556,
+     25.327509178085794
+    ]
+   },
+   "klab_pf": {
+    "us_per_op": 3.6858182687025804,
+    "saved_pct": 25.148825395019603,
+    "ci95": [
+     24.539011846951343,
+     25.20021782845373
+    ]
+   }
+  }
+ },
+ {
+  "d": 512,
+  "m": 1,
+  "layers": 80,
+  "klab_config": "tiny_t128_v1",
+  "pf_torch": {
+   "blocks": 4,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 1048576
+  },
+  "pf_klab": {
+   "blocks": 2,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 524288
+  },
+  "bit_torch_pair": true,
+  "bit_klab_pair": true,
+  "klab_vs_torch_rel_l2": 2.003830395496546e-06,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1620 MHz, 67, 52.03 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1485 MHz, 67, 50.77 W, 0x0000000000000004",
+   "ac_online": "1"
+  },
+  "arms": {
+   "torch": {
+    "us_per_op": 5.606399849057198,
+    "saved_pct": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "torch_aa": {
+    "us_per_op": 5.606399849057198,
+    "saved_pct": 0.0,
+    "ci95": [
+     -0.2216819402943937,
+     0.035594183874554375
+    ]
+   },
+   "torch_pf": {
+    "us_per_op": 4.376799985766411,
+    "saved_pct": 22.045456875564916,
+    "ci95": [
+     21.867882530574768,
+     22.13500681645183
+    ]
+   },
+   "klab": {
+    "us_per_op": 4.35199998319149,
+    "saved_pct": 22.363351639463993,
+    "ci95": [
+     22.146115186718017,
+     22.551252409435875
+    ]
+   },
+   "klab_pf": {
+    "us_per_op": 3.63520011305809,
+    "saved_pct": 35.275263492785314,
+    "ci95": [
+     35.079728916711005,
+     35.49397877614033
+    ]
+   }
+  }
+ },
+ {
+  "d": 512,
+  "m": 4,
+  "layers": 80,
+  "klab_config": "tiny_t128_v1",
+  "pf_torch": {
+   "blocks": 2,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 1048576
+  },
+  "pf_klab": {
+   "blocks": 1,
+   "kernel": "l2_hint",
+   "stride": 128,
+   "nbytes": 524288
+  },
+  "bit_torch_pair": true,
+  "bit_klab_pair": true,
+  "klab_vs_torch_rel_l2": 1.224149923983355e-06,
+  "regime_before": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1485 MHz, 67, 50.77 W, 0x0000000000000004",
+   "ac_online": "1"
+  },
+  "regime_after": {
+   "nvidia_powerd": "inactive",
+   "smi": "P0, 6001 MHz, 1485 MHz, 67, 49.70 W, 0x0000000000000000",
+   "ac_online": "1"
+  },
+  "arms": {
+   "torch": {
+    "us_per_op": 6.374400109052658,
+    "saved_pct": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "torch_aa": {
+    "us_per_op": 6.374400109052658,
+    "saved_pct": 0.0,
+    "ci95": [
+     -0.16348505778895905,
+     0.05647779371930062
+    ]
+   },
+   "torch_pf": {
+    "us_per_op": 5.06879985332489,
+    "saved_pct": 20.286849926950612,
+    "ci95": [
+     20.276122677654975,
+     20.4819313722339
+    ]
+   },
+   "klab": {
+    "us_per_op": 5.6832000613212585,
+    "saved_pct": 10.865191877396164,
+    "ci95": [
+     10.843374057266752,
+     10.931300638644291
+    ]
+   },
+   "klab_pf": {
+    "us_per_op": 5.207600072026253,
+    "saved_pct": 18.29934010813278,
+    "ci95": [
+     18.03484166582433,
+     18.47389567621113
+    ]
+   }
+  }
+ }
+]
